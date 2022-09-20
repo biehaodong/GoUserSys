@@ -1,0 +1,20 @@
+info 2022/08/02 16:24:18 http_server.go:181: http_server_login: username:admin login code: 200
+info 2022/08/02 16:24:21 http_server.go:262: http_server_getIfo: getInfo success username:admin
+info 2022/08/02 16:32:10 http_server.go:74: got a signalinterrupt
+info 2022/08/02 16:32:10 http_server.go:79: [INFO] ------exited--------
+info 2022/08/02 16:36:50 http_server.go:74: got a signalinterrupt
+info 2022/08/02 16:37:28 http_server.go:181: http_server_login: username:admin12 login code: 200
+info 2022/08/02 16:37:33 http_server.go:262: http_server_getIfo: getInfo success username:admin12
+info 2022/08/02 16:39:39 http_server.go:74: got a signalinterrupt
+info 2022/08/02 16:39:40 http_server.go:79: [INFO] ------exited--------
+info 2022/08/02 16:42:58 http_server.go:181: http_server_login: username:admin11 login code: 200
+info 2022/08/02 16:48:13 http_server.go:74: got a signalinterrupt
+info 2022/08/02 16:48:13 http_server.go:79: [INFO] ------exited--------
+info 2022/08/02 18:25:46 http_server.go:181: http_server_login: username:admin88 login code: 200
+info 2022/08/02 18:25:48 http_server.go:262: http_server_getIfo: getInfo success username:admin88
+info 2022/08/02 18:26:02 http_server.go:345: http_server_UpdateNickName: username:admin88 login code: 200
+info 2022/08/02 18:26:25 http_server.go:262: http_server_getIfo: getInfo success username:admin88
+info 2022/08/02 18:26:39 http_server.go:345: http_server_UpdateNickName: username:admin88 login code: 200
+info 2022/08/02 18:26:50 http_server.go:262: http_server_getIfo: getInfo success username:admin88
+info 2022/08/02 19:00:35 http_server.go:74: got a signalinterrupt
+info 2022/08/02 19:00:35 http_server.go:79: [INFO] ------exited--------

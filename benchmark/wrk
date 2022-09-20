@@ -1,0 +1,38 @@
+
+# err [mysql] 2022/07/31 23:54:34 packets.go:37: read tcp 127.0.0.1:63760->127.0.0.1:3306: read: connection reset by peer
+
+ # d 测试时间 _c 连接数量 t 线程数  s lua脚本
+ #固定
+ # login 200
+  wrk -d15s -c200 -t10 -s ./benchmark/login_test_fix.lua http://localhost:1806
+  #2000
+  wrk -d10s -c2000 -t10 -s ./benchmark/login_test_fix.lua http://localhost:1806
+
+ #随机
+ # login 200
+ wrk -d15s -c200 -t10 -s ./benchmark/login_test.lua http://localhost:1806
+ #2000
+ wrk -d15s -c2000 -t10 -s ./benchmark/login_test.lua http://localhost:1806
+
+ # _getInfo 200
+  #固定
+  wrk -d15s -c200 -t10 -s ./benchmark/getInfo_test_fix.lua http://localhost:1806
+  wrk -d15s -c2000 -t10 -s ./benchmark/getInfo_test_fix.lua http://localhost:1806
+ #随机200
+ wrk -d15s -c200 -t10 -s ./benchmark/getInfo_test.lua http://localhost:1806
+ #2000
+ wrk -d15s -c2000 -t10 -s ./benchmark/getInfo_test.lua http://localhost:1806
+
+ #update 固定
+  wrk -d15s -c200 -t10 -s ./benchmark/update_test_fix.lua http://localhost:1806
+ #update 2000
+ wrk -d15s -c2000 -t10 -s ./benchmark/update_test.lua_fix http://localhost:1806
+ #随机200
+ wrk -d15s -c200 -t10 -s ./benchmark/update_test.lua http://localhost:1806
+#update 2000
+wrk -d15s -c2000 -t10 -s ./benchmark/update_test.lua http://localhost:1806
+
+#upload 200
+wrk -d10s -c200 -t10 -s ./benchmark/upload_test.lua http://localhost:1806
+#upload 2000
+wrk -d10s -c2000 -t10 -s ./benchmark/upload_test.lua http://localhost:1806

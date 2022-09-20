@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Msg }}</title>
+</head>
+<body>
+    <div>
+        <p style = "position: absolute;left: 40%;top: 30%;">{{ .Msg }}</p>
+        <form style="position: absolute;left: 40%;top:35%;" action="/GetInfo" method="GET">
+            <input type="text" name="username" value="{{ .UserName }}" readonly="readonly" hidden="hidden"/>
+            <input type="submit" name="jump_btn" value="显示用户信息">
+        </form>
+    </div>
+</body>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - {{ .UserName }}</title>
+</head>
+<body>
+    <div>
+        <form style=" position: absolute;left: 35%;top: 27%;" action="/UploadPic" method="POST" enctype="multipart/form-data">
+            <input type="text" name="username" value="{{ .UserName }}" readonly="readonly" hidden="hidden" />
+            <img src="/static/{{ .ProfilePicture }}" height="150" width="150">
+            <p><input type="file" name="image" accept="image/png, image/jpg, image/gif, image/jpeg" /></p>
+            <p><input type="submit" name="update_btn" value="更换"></p>
+        </form>
+        <form style=" position: absolute;left: 50%;top: 40%;" action="/UpdateNickName" method="POST">
+            <p>账号:<input type="text" name="username" value="{{ .UserName }}" readonly="readonly" /></p>
+            <p>昵称:<input type="text" name="nickname" value="{{ .NickName }}" maxlength="30"/>
+            <p> <input type="submit" name="update_btn" value="更换"></p>
+        </form>
+        <form style=" position: absolute;left: 70%;top: 20%;" action="/Logout" method="POST">
+            <input type="text" name="username" value="{{ .UserName }}" readonly="readonly" hidden="hidden" />
+            <p> <input type="submit" name="logout_btn" value="退出登录"></p>
+
+        </form>
+    </div>
+</body>

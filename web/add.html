@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+<div style="position: absolute;left: 40%;top: 30%;">
+    <form action="http://localhost:1806/AddUser" method="POST">
+        <p>账号: <input type="text" name="username"  maxlength="30" /></p>
+        <p>密码: <input type="password" name="password" maxlength="30"/></p>
+        <p>昵称: <input type="text" name="nickname" maxlength="30"/></p>
+        <input type="submit" name="add_btn" value="注册" style="width: 80px;">
+
+    </form>
+    <form method="POST" style="position: absolute;right: 0px;top: 135px;">
+        <a href = "login.html" ><input type="button" value="取消"></a>
+    </form>
+    <p>{{ .Msg }}</p>
+</div>
+</body>
